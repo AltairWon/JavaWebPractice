@@ -18,6 +18,22 @@
     <c:forEach var="dto" items="${list}">
         <li>${dto}</li>
     </c:forEach>
+
+    <c:if test="${list.size() % 2 == 0}">
+        짝수
+    </c:if>
+
+    <c:if test="${list.size() % 2 != 0}">
+        홀수
+    </c:if>
+    <c:choose>
+        <c:when test="list.size() % 2 == 0">
+            짝수
+        </c:when>
+        <c:otherwise>
+            홀수
+        </c:otherwise>
+    </c:choose>
 </ul>
 
 </body>
